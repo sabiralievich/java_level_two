@@ -56,6 +56,13 @@ public class LessonOne {
         }
 
         public boolean doIt(Team team) {
+            for (int i = 0; i < team.participants.length; i++) {
+                if(team.participants[i].level >= level) {
+                    System.out.println(team.participants[i].name + " passed the Course");
+                } else {
+                    System.out.println(team.participants[i].name + " failed the Course");
+                }
+            }
             if (this.level > team.teamLevel) {
                 System.out.println("Team '" + team.name + "' failed the Course..");
                 return false;
